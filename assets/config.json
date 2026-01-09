@@ -1,5 +1,5 @@
 {
-  "imageDecryptEval": "JSON.stringify(_encryptedString);",
+  "imageDecryptEval": "[JSON.stringify(_encryptedString)]",
   "postDecryptEval": null,
   "shouldVerifyLinks": false
 }
