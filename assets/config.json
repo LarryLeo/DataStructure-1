@@ -1,5 +1,5 @@
 {
-  "imageDecryptEval": "[JSON.stringify(_encryptedString)]",
+  "imageDecryptEval": "const pageLinks=new Array;pageLinks.push(_encryptedString);JSON.stringify(pageLinks);",
   "postDecryptEval": null,
   "shouldVerifyLinks": false
 }
