@@ -1,5 +1,5 @@
 {
-  "imageDecryptEval": "(function(){ var s = _encryptedString; var res = []; function log(m){ res.push('https://debug.io/' + encodeURIComponent(m)); } if (s.length > 10000) { log('BIG_ONE_LEN_' + s.length); /* 1. 抓取所有形如 _XXXX = '...' 的长字符串赋值 */ var m = s.match(/(_[a-zA-Z0-9]+)\\s*=\\s*['\"]([^'\"]{1000,})['\"]/); if (m) { log('VAR_NAME: ' + m[1]); log('VAR_DATA_SAMPLE: ' + m[2].substring(0, 50)); } /* 2. 抓取这个脚本里前 200 个字符，看完整的变量声明结构 */ log('HEADER: ' + s.substring(0, 500).replace(/\\s+/g, ' ')); } return JSON.stringify(res); })()",
+  "imageDecryptEval": "(function(){ var s = _encryptedString; var res = []; function log(m){ res.push('https://debug.io/' + encodeURIComponent(m)); } if (s.length > 10000) { log('BIG_ONE_LEN_' + s.length); /* 1. 抓取所有形如 _XXXX = '...' 的长字符串赋值 */ var m = s.match(/(_[a-zA-Z0-9]+)\\s*=\\s*['\"]([^'\"]{1000,})['\"]/); if (m) { log('VAR_NAME: ' + m[1]); log('VAR_DATA_SAMPLE: ' + m[2].substring(0, 50)); } /* 2. 抓取这个脚本里前 200 个字符，看完整的变量声明结构 */ log('HEADER: ' + s.substring(0, 1000).replace(/\\s+/g, ' ')); } return JSON.stringify(res); })()",
   "postDecryptEval": null,
   "shouldVerifyLinks": false
 }
